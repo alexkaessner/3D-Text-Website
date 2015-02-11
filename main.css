@@ -8,11 +8,11 @@ html{
 	width:100%;
 	height:100%;
 	background-color: #ebebeb;
-	background-image:	-webkit-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
-	background-image: 	 -moz-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
-	background-image: 		-ms-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
-	background-image:		   -o-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
-	background-image: 				linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
+	background-image:	-webkit-linear-gradient(top, hsl(0, 0%, 90%), hsl(0, 0%, 60%));
+	background-image: 	 -moz-linear-gradient(top, hsl(0, 0%, 90%), hsl(0, 0%, 60%));
+	background-image: 		-ms-linear-gradient(top, hsl(0, 0%, 90%), hsl(0, 0%, 60%));
+	background-image:		   -o-linear-gradient(top, hsl(0, 0%, 90%), hsl(0, 0%, 60%));
+	background-image: 				linear-gradient(top, hsl(0, 0%, 90%), hsl(0, 0%, 60%));
 }
 
 body{
@@ -38,7 +38,7 @@ body{
 	color: hsla(0.0, 0.0%, 100%, 1.00);
 	font-size: 16px;
 	text-align: center;
-	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	text-shadow: 0px 1px 0px black;
 	padding: 20px;
 }
 
@@ -97,11 +97,11 @@ body{
 	height: 40px;
 
 	background-color: #212121;
-	background-image: -webkit-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image: 	 -moz-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image:			-ms-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image: 		 -o-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image:					linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
+	background-image: -webkit-linear-gradient(top, hsl(0, 0%, 13%), hsl(0, 0%, 32%));
+	background-image: 	 -moz-linear-gradient(top, hsl(0, 0%, 13%), hsl(0, 0%, 32%));
+	background-image:			-ms-linear-gradient(top, hsl(0, 0%, 13%), hsl(0, 0%, 32%));
+	background-image: 		 -o-linear-gradient(top, hsl(0, 0%, 13%), hsl(0, 0%, 32%));
+	background-image:					linear-gradient(top, hsl(0, 0%, 13%), hsl(0, 0%, 32%));
 }
 
 #boxshadow{
@@ -129,7 +129,7 @@ body{
 	margin-top: 14px;
 
 	color: hsl(0,0%,40%);
-	text-shadow: hsl(0,0%,0%) 0px 1px 2px;
+	text-shadow: black 0px 1px 2px;
 
 	cursor: pointer;
 	z-index: 2;
@@ -145,7 +145,7 @@ body{
 	right: 34px;
 
 	color: hsl(0,0%,60%);
-	text-shadow: hsl(0,0%,0%) 0px 1px 2px;
+	text-shadow: black 0px 1px 2px;
 }
 
 #sharebutton{
@@ -209,7 +209,7 @@ body{
 	background-image: 		 -o-linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
 	background-image: 				linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
 
-	border: 1px solid hsla(0.0, 0.0%, 0.0%, 1.00);
+	border: 1px solid black;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px 5px 5px 5px;
@@ -222,7 +222,7 @@ body{
 	font-size: 13px;
 	text-align: left;
 	font-weight: normal;
-	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	text-shadow: 0px 1px 0px black;
 	padding: 10px;
 }
 
@@ -258,7 +258,7 @@ body{
 	color: hsla(0.0, 0.0%, 100%, 1.00);
 	font-size: 13px;
 	text-align: center;
-	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	text-shadow: 0px 1px 0px black;
 	padding: 10px;
 }
 
@@ -266,6 +266,6 @@ a{
 	color: hsla(0.0, 0.0%, 100%, 1.00);
 	font-size: 13px;
 	text-align: center;
-	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	text-shadow: 0px 1px 0px black;
 	padding: 10px;
 }

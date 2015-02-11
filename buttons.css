@@ -12,7 +12,7 @@
 
 
   /* Stroke  */
-	border: 1px solid hsla(0.0, 0.0%, 0.0%, 1.00);
+	border: 1px solid black;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px 3px 3px 3px;
@@ -23,7 +23,7 @@
 	font-size: 11px;
 	text-align: center;
 	font-weight: bold;
-	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	text-shadow: 0px 1px 0px black;
 	line-height: 21px;
 
 
