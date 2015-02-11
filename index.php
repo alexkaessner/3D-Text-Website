@@ -73,7 +73,7 @@ function updateShareLink ()
 <body onload="showIntro();">
 	<!-- ++++++++++++++++++ MAIN TEXT AREA ++++++++++++++++++ -->
 	<div id="intro" class="popover" style="opacity: 0;" onklick="hideIntro();">
-		<div id="introText"><b>Welcome!</b></br></br>This website allows you to type text with a fancy 3D look. <i>Just klick on this huge grey area and start typing.</i></br></br>If you want to share your text scrol down and press "share".</br></br>Much Fun!</div>
+		<div id="introText"><b>Welcome!</b></br></br>This website allows you to type text with a fancy 3D look. <i>Just klick on this huge grey area and start typing.</i></br></br>If you want to share your text scroll down and press "Share".</br></br>Have Fun!</div>
 	</div>
 
   <!-- ++++++++++++++++++ MAIN TEXT AREA ++++++++++++++++++ -->
@@ -94,13 +94,13 @@ function updateShareLink ()
 	   	</div>
   	</div>
 
-    <div id="copyright" onclick="displayPopover('infopopover');">©2015 Alexander Käßner</div>
+    <div id="copyright" onclick="displayPopover('infopopover');">© 2013 Alexander Käßner</div>
 
     <!-- Info -->
     <div class="infoButton" onclick="displayPopover('infopopover');">i</div>
     <div id="infoarea">
     	<div id="infopopover" class="popover" style="display: none;">
-    		<div id="infoheader"><b>Made by Alexander Käßner</b><br/><br/><a href="http://www.alexkaessner.de/"><u>visit my website!</u></a></div>
+    		<div id="infoheader"><b>Made by <a href="http://www.alexkaessner.de/">Alexander Käßner</a></b><br/><br/><a href="https://github.com/alexkaessner/3D-Text-Website"><u>Fork this on Github!</u></a></div>
     	</div>
   	</div>
     <div id="version">v 1.0</div>
