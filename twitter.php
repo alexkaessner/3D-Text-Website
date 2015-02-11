@@ -1,0 +1,2 @@
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://3d.alexkaessner.de/?text=I%20like%20this!" data-text="Read this:" data-related="alexkaessner" data-count="none" data-hashtags="3dtext">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

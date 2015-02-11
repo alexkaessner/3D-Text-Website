@@ -3,166 +3,227 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>3D Text</title>
+
+<meta name="author" content="Alexander Käßner" />
+<meta name="keywords" content="Alexander, Alexander Käßner, Käßner, alexkaessner, 3d, css, css3, 3d css, 3d text" />
+<meta name="description" content="Share some kind words with friends wirtten with nice 3D text." />
+<meta http-equiv="content-language" content="EN" />
+<meta name="robots" content="index" />
+<meta name="revisit-after" content="1 days" />
+<meta name="viewport" content="initial-scale=1.0">
+
+<link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="favicons/ipad-retina.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link href="main.css" rel="stylesheet" type="text/css"/>
+<link href="buttons.css" rel="stylesheet" type="text/css"/>
+
+<script src="javascripts/prototype.js" type="text/javascript"></script>
+<script src="javascripts/scriptaculous.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37407044-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 <style type="text/css">
-html{
-	width:100%;
-	height:100%;	
-	background-color: #ebebeb;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235, 235, 235)), to(rgb(203, 203, 203)));
-	background-image: -webkit-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: -moz-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: -o-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: -ms-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ebebeb', EndColorStr='#cbcbcb');
-}
-
-body{
-	position:absolute;
-	left:0px;
-	bottom:0px;
-	width:100%;
-	height:100%;
-	
-	margin-top:0px;
-	margin-left:0px;
-	margin-right:0px;
-	margin-bottom:0px;
-}
-
-#textarea{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	background-color:transparent;
-	outline:none;
-	border:none;
-	
-	vertical-align: middle;
-	
-	padding-top:0px;
-	padding-left:0px;
-	padding-right:0px;
-	padding-bottom:0px;
-}
-
-#textfield{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	background-color:transparent;
-	outline:none;
-	border:none;
-	
-	padding-top:0px;
-	padding-left:0px;
-	padding-right:0px;
-	padding-bottom:0px;
-}
-
-.text{
-	font-family:Helvetica, Arial, sans-serif;
-	font-size:150px;
-	font-style:normal;
-	font-weight:900;
-	text-align:center;
-	padding-top:auto;
-	padding-bottom:auto;
-	
-	color:hsl(0,0%,98%);
-	text-shadow:hsl(0,0%,88%) 0px 1px 0px, hsl(0,0%,86%) 0px 2px 0px, hsl(0,0%,84%) 0px 3px 0px, hsl(0,0%,82%) 0px 4px 0px, hsl(0,0%,80%) 0px 5px 0px, hsl(0,0%,78%) 0px 6px 0px, hsl(0,0%,76%) 0px 7px 0px, hsl(0,0%,74%) 0px 8px 0px, hsl(0,0%,72%) 0px 9px 0px, hsla(0,0%,0%,0.15) 0px 9px 1px, hsla(0,0%,0%,0.15) 1px 9px 1px, hsla(0,0%,0%,0.14) 1px 10px 2px, hsla(0,0%,0%,0.13) 2px 11px 2px, hsla(0,0%,0%,0.12) 3px 12px 2px, hsla(0,0%,0%,0.11) 4px 13px 2px, hsla(0,0%,0%,0.1) 5px 14px 2px, hsla(0,0%,0%,0.2) 7px 16px 3px, hsla(0,0%,0%,0.2) 10px 18px 10px;
-}
-
-#bottombar{
-	position:absolute;
-	bottom:-40px;
-	left:0px;
-	width:100%;
-	height:40px;
-	
-	background-color: #212121;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(33, 33, 33)), to(rgb(81, 81, 81)));
-	background-image: -webkit-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image: -moz-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image: -o-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image: -ms-linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	background-image: linear-gradient(top, rgb(33, 33, 33), rgb(81, 81, 81));
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#212121', EndColorStr='#515151');
-}
-
-#boxshadow{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:4px;
-	
-	/*background-color: #000000;*/
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.50)), to(rgba(0, 0, 0, 0.00)));
-	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.00));
-	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.00));
-	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.00));
-	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.00));
-	background-image: linear-gradient(top, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.00));
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
-}
-
-#version{
-	font-family:Helvetica, Arial, sans-serif;
-	font-size:16px;
-	font-style:normal;
-	font-weight:900;
-	text-align:right;
-	position:absolute;
-	top:12px;
-	right:12px;
-	
-	color:hsl(0,0%,60%);
-	text-shadow:hsl(0,0%,0%) 0px 1px 2px;
-}
-
 #tweetbutton{
 	position:absolute;
-	top:10px;
+	bottom:10px;
 	left:10px;
 }
 
 #likebutton{
 	position:absolute;
-	top:10px;
+	bottom:10px;
 	left:76px;
 }
+
+#sharearea{
+	position: absolute;
+	left: 10px;
+	bottom: 50px;
+	width: 250px;
+	height: 100px;
+}
+
+#sharepopover{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 250px;
+	height: 100px;
+}
+
+#infoarea{
+	position: absolute;
+	right: 10px;
+	bottom: 50px;
+	width: 200px;
+	height: 65px;
+}
+
+#infopopover{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 200px;
+	height: 65px;
+}
+
+.popover{
+	background: transparent;
+	background-color: #333333;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(0, 0%, 30%)), to(hsl(0, 0%, 20%)));
+	background-image: -webkit-linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
+	background-image: -moz-linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
+	background-image: -o-linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
+	background-image: -ms-linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
+	background-image: linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#4d4d4d', EndColorStr='#333333');
+	
+	border: 1px solid hsla(0.0, 0.0%, 0.0%, 1.00);
+	-moz-border-radius: 5px; /* FF1-3.6 */
+	-webkit-border-radius: 5px; /* Saf3-4, iOS 1-3.2, Android <1.6 */
+	border-radius: 5px 5px 5px 5px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+	
+	box-shadow:0px 1px 2px hsla(0.0, 0.0%, 0.0%, 0.5),inset 0px 1px 0px hsla(0.0, 0.0%, 100.0%, 0.20);
+}
+
+#shareheader{
+	color: hsla(0.0, 0.0%, 100%, 1.00);
+	font-family: "Helvetica","Verdana","Arial","sans-serif";
+	font-size: 13px;
+	text-align: left;
+	font-weight: normal;
+	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	padding: 10px;
+}
+
+.textfield{
+	width: 226px;
+	height: 20px;
+	margin: 0px 10px;
+	
+	
+	background-color: #1a1a1a;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(0, 0%, 10%)), to(hsl(0, 0%, 20%)));
+	background-image: -webkit-linear-gradient(top, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
+	background-image: -moz-linear-gradient(top, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
+	background-image: -o-linear-gradient(top, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
+	background-image: -ms-linear-gradient(top, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
+	background-image: linear-gradient(top, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#1a1a1a', EndColorStr='#333333');
+
+	border:1px solid black;
+	-moz-border-radius: 2px; /* FF1-3.6 */
+	-webkit-border-radius: 2px; /* Saf3-4, iOS 1-3.2, Android <1.6 */
+	border-radius: 2px 2px 2px 2px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+	
+	font-family:  "Helvetica","Verdana","Arial","sans-serif";
+	text-shadow: 0px 1px 0px black;
+	color:#808080;
+	
+	box-shadow:0px 1px 1px hsla(0.0, 0.0%, 100.0%, 0.1),inset 0px 1px 2px hsla(0.0, 0.0%, 0.0%, 0.50);
+}
+
+.textfield:focus{
+	outline:none;
+}
+
+#infoheader{
+	color: hsla(0.0, 0.0%, 100%, 1.00);
+	font-family: "Helvetica","Verdana","Arial","sans-serif";
+	font-size: 13px;
+	text-align: center;
+	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	padding: 10px;
+}
+
+a{
+	color: hsla(0.0, 0.0%, 100%, 1.00);
+	font-family: "Helvetica","Verdana","Arial","sans-serif";
+	font-size: 13px;
+	text-align: center;
+	text-shadow: 0px 1px 0px hsla(0.0, 0.0%, 0.0%, 1.00);
+	padding: 10px;
+}
+
 </style>
+
+<script type="text/javascript">
+
+function displayPopover (popover)
+{
+	if (popover == 'sharepopover'){
+		if (document.getElementById(popover).style.display == 'none'){
+		Effect.Grow(popover, {direction: 'bottom-left', duration: 0.3}); return false;
+		} else {
+			Effect.Shrink(popover, {direction: 'bottom-left', duration: 0.3}); return false;
+		}
+	}
+	
+	if (popover == 'infopopover'){
+		if (document.getElementById(popover).style.display == 'none'){
+		Effect.Grow(popover, {direction: 'bottom-right', duration: 0.3}); return false;
+		} else {
+			Effect.Shrink(popover, {direction: 'bottom-right', duration: 0.3}); return false;
+		}
+	}
+}
+
+function updateShareLink ()
+{
+	if (document.getElementById('textarea').value == ""){
+		var linkurl="http://3d.alexkaessner.de/?text=I%20like%20this!";
+	}else{
+		var linkurl="http://3d.alexkaessner.de/?text="+encodeURIComponent(document.getElementById('textarea').value);
+	}
+	document.getElementById('linkTextfield').value = linkurl;
+}
+</script>
 </head>
 
 <body>
-	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-	<textarea id="textarea" class="text" style="display:block;"><?php
-			echo ($_GET["text"]);
-    	?></textarea>
+	<textarea id="textarea" class="text" style="display:block;" onkeyup="updateShareLink();"><?php echo ($_GET["text"]); ?></textarea>
     <input id="textfield" maxlength="auto" class="text" type="text" value="☁" style="display:none;" />
+    
+    
+    <!-- ++++++++++++++++++++ BOTTOM BAR ++++++++++++++++++++ -->
     <div id="bottombar">
     	<div id="boxshadow"></div>
-        <div id="version">v 0.1</div>
-        <div id="tweetbutton">
-        	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://css3.alexkaessner.de/3dtext/index.php?text=CSS3%20is%20Fun!" data-related="alexkaessner" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>
-        <div id="likebutton">
-        	<div class="fb-like" data-href="http://css3.alexkaessner.de/3dtext/index.php?text=CSS3%20is%20Fun!" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="like" data-colorscheme="dark" data-font="lucida grande"></div>
-        </div>
+    	
+    	<div id="sharebutton" class="blackButton" onclick="displayPopover('sharepopover'); updateShareLink ();">Share</div>
+    	<div id="sharearea">
+	    	<div id="sharepopover" class="popover" style="display: none;">
+	    		<div id="shareheader">Share this Link:</div>
+	    		<input id="linkTextfield" class="textfield" name="link" type="text" value="http://3d.alexkaessner.de/?text=Welcome!" onclick="this.select();"/>
+	        	<div id="tweetbutton"><?php include('twitter.php') ?></div>
+	        	<div id="likebutton"><?php include('facebook.php') ?></div>
+	    	</div>
+    	</div>
+        
+        <div id="copyright" onclick="displayPopover('infopopover');">©2013 Alexander Käßner</div>
+        
+        <div class="infoButton" onclick="displayPopover('infopopover');">i</div>
+        <div id="infoarea">
+	    	<div id="infopopover" class="popover" style="display: none;">
+	    		<div id="infoheader"><b>Made by Alexander Käßner</b><br/><br/><a href="http://www.alexkaessner.de/"><u>visit my website!</u></a></div>
+	    	</div>
+    	</div>
+        <div id="version">v 1.0</div>
     </div>
 </body>
 </html>
