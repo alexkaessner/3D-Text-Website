@@ -5,7 +5,7 @@
 <title>3D Text</title>
 
 <meta name="author" content="Alexander Käßner" />
-<meta name="keywords" content="Alexander, Alexander Käßner, Käßner, alexkaessner, 3d, css, css3, 3d css, 3d text" />
+<meta name="keywords" content="3d, css, css3, 3d css, 3d text, css experiment" />
 <meta name="description" content="Share some kind words with friends wirtten with nice 3D text." />
 <meta http-equiv="content-language" content="EN" />
 <meta name="robots" content="index" />
@@ -13,7 +13,7 @@
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon-precomposed" href="favicons/ipad-retina.png" />
+<link rel="apple-touch-icon-precomposed" href="favicons/apple-touch-icon.png" />
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -93,12 +93,12 @@
 	background-image: -ms-linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
 	background-image: linear-gradient(top, hsl(0, 0%, 30%), hsl(0, 0%, 20%));
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#4d4d4d', EndColorStr='#333333');
-	
+
 	border: 1px solid hsla(0.0, 0.0%, 0.0%, 1.00);
 	-moz-border-radius: 5px; /* FF1-3.6 */
 	-webkit-border-radius: 5px; /* Saf3-4, iOS 1-3.2, Android <1.6 */
 	border-radius: 5px 5px 5px 5px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
-	
+
 	box-shadow:0px 1px 2px hsla(0.0, 0.0%, 0.0%, 0.5),inset 0px 1px 0px hsla(0.0, 0.0%, 100.0%, 0.20);
 }
 
@@ -116,8 +116,8 @@
 	width: 226px;
 	height: 20px;
 	margin: 0px 10px;
-	
-	
+
+
 	background-color: #1a1a1a;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(0, 0%, 10%)), to(hsl(0, 0%, 20%)));
 	background-image: -webkit-linear-gradient(top, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
@@ -131,11 +131,11 @@
 	-moz-border-radius: 2px; /* FF1-3.6 */
 	-webkit-border-radius: 2px; /* Saf3-4, iOS 1-3.2, Android <1.6 */
 	border-radius: 2px 2px 2px 2px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
-	
+
 	font-family:  "Helvetica","Verdana","Arial","sans-serif";
 	text-shadow: 0px 1px 0px black;
 	color:#808080;
-	
+
 	box-shadow:0px 1px 1px hsla(0.0, 0.0%, 100.0%, 0.1),inset 0px 1px 2px hsla(0.0, 0.0%, 0.0%, 0.50);
 }
 
@@ -174,7 +174,7 @@ function displayPopover (popover)
 			Effect.Shrink(popover, {direction: 'bottom-left', duration: 0.3}); return false;
 		}
 	}
-	
+
 	if (popover == 'infopopover'){
 		if (document.getElementById(popover).style.display == 'none'){
 		Effect.Grow(popover, {direction: 'bottom-right', duration: 0.3}); return false;
@@ -199,12 +199,12 @@ function updateShareLink ()
 <body>
 	<textarea id="textarea" class="text" style="display:block;" onkeyup="updateShareLink();"><?php echo ($_GET["text"]); ?></textarea>
     <input id="textfield" maxlength="auto" class="text" type="text" value="☁" style="display:none;" />
-    
-    
+
+
     <!-- ++++++++++++++++++++ BOTTOM BAR ++++++++++++++++++++ -->
     <div id="bottombar">
     	<div id="boxshadow"></div>
-    	
+
     	<div id="sharebutton" class="blackButton" onclick="displayPopover('sharepopover'); updateShareLink ();">Share</div>
     	<div id="sharearea">
 	    	<div id="sharepopover" class="popover" style="display: none;">
@@ -214,9 +214,9 @@ function updateShareLink ()
 	        	<div id="likebutton"><?php include('facebook.php') ?></div>
 	    	</div>
     	</div>
-        
-        <div id="copyright" onclick="displayPopover('infopopover');">©2013 Alexander Käßner</div>
-        
+
+        <div id="copyright" onclick="displayPopover('infopopover');">©2015 Alexander Käßner</div>
+
         <div class="infoButton" onclick="displayPopover('infopopover');">i</div>
         <div id="infoarea">
 	    	<div id="infopopover" class="popover" style="display: none;">
