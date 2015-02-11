@@ -27,11 +27,23 @@
 
 <script type="text/javascript">
 
+function showIntro ()
+{
+	if (document.getElementById('textarea').value == ''){
+		Effect.Appear('intro', { duration: 0.3 }); return false;
+	}
+}
+
+function hideIntro ()
+{
+	Effect.Fade('intro', { duration: 0.3 }); return false;
+}
+
 function displayPopover (popover)
 {
 	if (popover == 'sharepopover'){
 		if (document.getElementById(popover).style.display == 'none'){
-		Effect.Grow(popover, {direction: 'bottom-left', duration: 0.3}); return false;
+			Effect.Grow(popover, {direction: 'bottom-left', duration: 0.3}); return false;
 		} else {
 			Effect.Shrink(popover, {direction: 'bottom-left', duration: 0.3}); return false;
 		}
@@ -39,7 +51,7 @@ function displayPopover (popover)
 
 	if (popover == 'infopopover'){
 		if (document.getElementById(popover).style.display == 'none'){
-		Effect.Grow(popover, {direction: 'bottom-right', duration: 0.3}); return false;
+			Effect.Grow(popover, {direction: 'bottom-right', duration: 0.3}); return false;
 		} else {
 			Effect.Shrink(popover, {direction: 'bottom-right', duration: 0.3}); return false;
 		}
@@ -58,9 +70,14 @@ function updateShareLink ()
 </script>
 </head>
 
-<body>
+<body onload="showIntro();">
+	<!-- ++++++++++++++++++ MAIN TEXT AREA ++++++++++++++++++ -->
+	<div id="intro" class="popover" style="opacity: 0;" onklick="hideIntro();">
+		<div id="introText"><b>Welcome!</b></br></br>This website allows you to type text with a fancy 3D look. <i>Just klick on this huge grey area and start typing.</i></br></br>If you want to share your text scrol down and press "share".</br></br>Much Fun!</div>
+	</div>
+
   <!-- ++++++++++++++++++ MAIN TEXT AREA ++++++++++++++++++ -->
-	<textarea id="textarea" class="text" style="display:block;" onkeyup="updateShareLink();"><?php echo ($_GET["text"]); ?></textarea>
+	<textarea id="textarea" class="text" style="display:block;" onkeyup="updateShareLink();" onfocus="hideIntro();"><?php echo ($_GET["text"]); ?></textarea>
 
   <!-- ++++++++++++++++++++ BOTTOM BAR ++++++++++++++++++++ -->
   <div id="bottombar">
