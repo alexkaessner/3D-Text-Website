@@ -8,11 +8,11 @@ html{
 	width:100%;
 	height:100%;
 	background-color: #ebebeb;
-	background-image:	-webkit-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: 	 -moz-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: 		-ms-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image:		   -o-linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
-	background-image: 				linear-gradient(top, rgb(235, 235, 235), rgb(203, 203, 203));
+	background-image:	-webkit-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
+	background-image: 	 -moz-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
+	background-image: 		-ms-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
+	background-image:		   -o-linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
+	background-image: 				linear-gradient(top, hsl(0.0, 0.0%, 90.0%), hsl(0.0, 0.0%, 60.0%));
 }
 
 body{
