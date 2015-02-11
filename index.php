@@ -103,7 +103,7 @@ function updateShareLink ()
     		<div id="infoheader"><b>Made by <a href="http://www.alexkaessner.de/">Alexander Käßner</a></b><br/><br/><a href="https://github.com/alexkaessner/3D-Text-Website"><u>Fork this on Github!</u></a></div>
     	</div>
   	</div>
-    <div id="version">v 1.0</div>
+    <div id="version">v 1.1</div>
   </div>
 </body>
 </html>
