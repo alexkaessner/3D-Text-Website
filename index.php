@@ -8,8 +8,6 @@
 <meta name="keywords" content="3d, css, css3, 3d css, 3d text, css experiment" />
 <meta name="description" content="Share some kind words with friends wirtten with nice 3D text." />
 <meta http-equiv="content-language" content="EN" />
-<meta name="robots" content="index" />
-<meta name="revisit-after" content="1 days" />
 <meta name="viewport" content="initial-scale=1.0">
 
 <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon" />
@@ -23,7 +21,6 @@
 
 <script src="javascripts/prototype.js" type="text/javascript"></script>
 <script src="javascripts/scriptaculous.js" type="text/javascript"></script>
-<script src="analytics.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 
@@ -89,8 +86,6 @@ function updateShareLink ()
 	   	<div id="sharepopover" class="popover" style="display: none;">
 	   		<div id="shareheader">Share this Link:</div>
     		<input id="linkTextfield" class="textfield" name="link" type="text" value="http://3d.alexkaessner.de/?text=Welcome!" onclick="this.select();"/>
-        <div id="tweetbutton"><?php include('twitter.php') ?></div>
-	      <div id="likebutton"><?php include('facebook.php') ?></div>
 	   	</div>
   	</div>
 
